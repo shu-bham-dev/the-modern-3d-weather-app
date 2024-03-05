@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Inputs from "./components/Inputs";
 import TimeDesc from "./components/TimeDesc";
 import Temperature from "./components/Temperature";
+import Forecast from "./components/Forecast";
 
 const App = () => {
   return (
@@ -12,6 +13,8 @@ const App = () => {
       <Inputs />
       <TimeDesc />
       <Temperature />
+      <Forecast title="hourly forcast" />
+      <Forecast title="daily forcast" />
     </div>
   );
 };
