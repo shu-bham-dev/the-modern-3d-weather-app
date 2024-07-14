@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getFormatedData, getWeatherData } from "../services/weatherService";
 
 interface IPropType {
   title: String;
 }
 const Forecast = ({ title }: IPropType) => {
+  useEffect(() => {
+    const data = getFormatedData("weather", { q: "varanasi" });
+    console.log(data);
+  }, []);
+
   return (
     <div>
       <div className="flex items-center justify-start mt-6">
-        <p className="text-white font-medium uppercase">title</p>
+        <p className="text-white font-medium uppercase">{title}</p>
       </div>
       <hr className="my-2" />
       <div className="flex flex-row items-center justify-between text-white">
